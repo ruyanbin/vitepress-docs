@@ -17,6 +17,40 @@
             {
                 "text": "JavaScript",
                 "link": "views/Basics/js/index"
+            },
+            {
+                "text": "Node",
+                "link": "views/BackEnd/Node/index"
+            },
+            {
+                "text": "Nginx",
+                "link": "views/BackEnd/Nginx/index"
+            },
+            {
+                "text":"typescript",
+                "link":"views/Basics/Typescript/index"
+            }
+        ]
+    },
+    {
+        "text": "框架知识",
+        "items": [
+            {
+                "text": "Vue",
+                "link": "views/Framework/Vue/index"
+            },
+            {
+                "text": "React",
+                "link": "views/Framework/React/index"
+            }
+        ]
+    },
+    {
+        "text": "其他",
+        "items": [
+            {
+                "text": "Git",
+                "link": "views/Other/Git/index"
             }
         ]
     }

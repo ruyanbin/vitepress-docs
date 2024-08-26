@@ -4,7 +4,6 @@ next:
     link: 'views/Basics/js/designPattern'
 ---
 # javascript 知识
-
 ## 介绍
 
 ::: tip

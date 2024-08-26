@@ -139,3 +139,67 @@ const ownProperties = Object.getOwnPropertyNames(obj)
 
 }
 ```
+
+## 虚拟滚动
+
+::: tip
+ 使用InterSectionObserver API 来实现虚拟滚意味着我们会依赖于浏览器的API来观察元素进入或离开视口，
+而非直接监听滚动事件。因此，我们不需要监听滚动事件，只需要在元素进入或离开视口时，更新其位置和显示状态即可。
+:::
+```js
+class virtualScroll{
+
+constructor(container,itemHeight,totalItems,renderItem){
+ this.container = container
+ this.itemHeight = itemHeight
+ this.totalItems = totalItems
+ this.renderItem = renderItem
+ this.observer = new IntersectionObserver(this.handleIntersection.bind(this), {
+     root: this.container,
+     threshold: 1
+ })
+ this.items = new Map()
+ this.init()
+}
+ init(){
+ for(let i = 0; i < this.totalItems; i++){
+  const placeholder =this.createPlaceholder(i)
+  this.container.appendChild(placeholder)
+  this.observer.observe(placeholder)
+ }
+ }
+ 
+ createPlaceholder(index){
+  const placeholder = document.createElement('div')
+  placeholder.style.height = `${this.itemHeight}px`
+  placeholder.dataset.index = index
+  return placeholder
+ }
+ handleIntersection(entries){
+  entries.forEach(entry => {
+   const index = parseInt(entry.target.dataset.index)
+    if (entry.isIntersecting) {
+      const item = this.renderItem(index)
+      this.container.appendChild(item)
+      this.items.set(index, item)
+    } else if(this.items.has(index)){
+     const placeholder =this.createPlaceholder(index)
+     this.container.replaceChild(placeholder, this.items.get(index))
+     this.observer.observe(placeholder)
+     this.items.delete(index)
+    }
+  })
+ }
+}
+
+function renderItem(index){
+const item = document.createElement('div')
+ item.classList.add('item')
+ item.textContent = `Item ${index}`
+ item.dataset.index = index
+ item.style.height = `30px`
+ return item
+}
+const container = document.querySelector('.container')
+const virtualScroll = new virtualScroll(container,30,1000,renderItem)
+```

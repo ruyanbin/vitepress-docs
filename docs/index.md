@@ -8,7 +8,7 @@ hero:
   tagline: 学习
   image:
 #      首页右边的图片
-      src: /public/learn.png
+      src: /learn.png
 #      图片描述
   alt: 书山有路勤为径
   actions:
