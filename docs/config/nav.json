@@ -1,0 +1,23 @@
+[
+    {
+        "text": "Home",
+        "link": "/"
+    },
+    {
+        "text": "前端知识",
+        "items": [
+            {
+                "text": "HTML",
+                "link": "views/Basics/Html/index"
+            },
+            {
+                "text": "CSS",
+                "link": "views/Basics/css/index"
+            },
+            {
+                "text": "JavaScript",
+                "link": "views/Basics/js/index"
+            }
+        ]
+    }
+]
