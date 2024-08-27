@@ -30,7 +30,7 @@ const elements = document.querySelectorAll('.element');
 ```
 5. 监听元素尺寸变化回调函数
 ```js
-callback(entries, observer) {
+function callback(entries, observer){
   entries.forEach(entry => {
     console.log(entry.contentRect);
   })
