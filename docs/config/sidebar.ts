@@ -53,7 +53,29 @@ export default {
         },
         {
             text: "webApi",
-            link: "views/Basics/js/webApi"
+            collapsed: true,
+            items: [
+                {
+                    text: "介绍",
+                    link: "views/Basics/js/webApi/index"
+                },
+                {
+                    text: "MutationObserve",
+                    link: "views/Basics/js/webApi/MutationObserver"
+                },
+                {
+                    text: "PerformanceObserver",
+                    link: "views/Basics/js/webApi/PerformanceObserver"
+                },
+                {
+                    text: "IntersectionObserver",
+                    link: "views/Basics/js/webApi/IntersectionObserver"
+                },
+                {
+                    text: "ResizeObserver",
+                    link: "views/Basics/js/webApi/ResizeObserver"
+                }
+            ]
         },
 
         {
@@ -64,5 +86,6 @@ export default {
             text: "手写",
             link: "views/Basics/js/handwriting"
         }
-    ]
+    ],
+    "views/"
 }
