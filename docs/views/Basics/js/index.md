@@ -275,7 +275,7 @@ weakMap 的键名所引用的对象，垃圾回收机制会自动删除对应的
 
 2. 创建DOM节点
 
-```angular2html
+```
 document.createElement("tagName"); // 创建一个元素节点
 document.createTextNode("text"); // 创建一个文本节点
 document.createComment("comment"); // 创建一个注释节点

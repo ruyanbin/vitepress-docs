@@ -61,18 +61,16 @@ function callback(list) {
 ```
 
 4. 方法
-   4.1 observe()：
-
+- observe()：
    ::: tip
    observe 方法用于启动性能观察器以开始监测指定类型的性能条目。options 方法接受一个参数，参数要求是对象形式，其中包含要监测的性能条目类型（entryTypes）和一个回调函数，用于处理观察到的性能条目。当指定的性能条目可用时，会触发回调函数。
-
    :::
    参数值:
-   entryTypes（必需）： 一个字符串数组，用于指定要监测的性能条目类型
-   buffered（可选）：一个布尔值，指示是否应该检查已缓冲的性能条目（默认为 false）。如果设置为 true，则性能观察器将检查在调用 observe 之前已经发生的性能条目。
-   transferMode（可选） 一个字符串，用于指定如何传输性能条目。可以包括以下值：
-   “report”：默认值，性能条目将通过回调函数进行报告。
-   “accumulate”：性能条目将积累并传递给回调函数。
+   1. entryTypes（必需）： 一个字符串数组，用于指定要监测的性能条目类型
+   2. buffered（可选）：一个布尔值，指示是否应该检查已缓冲的性能条目（默认为 false）。如果设置为 true，则性能观察器将检查在调用 observe 之前已经发生的性能条目。
+   3. transferMode（可选） 一个字符串，用于指定如何传输性能条目。可以包括以下值：
+   4. “report”：默认值，性能条目将通过回调函数进行报告。
+   5. “accumulate”：性能条目将积累并传递给回调函数。
 
    ```javascript
    observer.observe({
@@ -82,12 +80,11 @@ function callback(list) {
    });
    ```
 
-   4.2 disconnect()：
+- disconnect()：
    停止观察器，不再接收新的性能条目。
 
    ```javascript
    observer.disconnect();
    ```
-
-   4.3 takeRecords()方法
+- takeRecords()方法
    当前性能观察器队列中尚未传递给回调函数的性能条目。这些性能条目会从队列中移除，并以数组的形式返回。这可以在停止观察之前用于检索观察到的性能数据。
