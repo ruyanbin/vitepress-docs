@@ -1,9 +1,11 @@
 ---
 next:
-    text: '设计模式'
-    link: 'views/Basics/js/designPattern'
+  text: "设计模式"
+  link: "views/Basics/js/designPattern"
 ---
+
 # javascript 知识
+
 ## 介绍
 
 ::: tip
@@ -12,8 +14,8 @@ JavaScript 是一门弱类型、动态、基于原型的脚本语言，它支持
 
 ## 1. 基础数据类型
 
--   基本类型：String、Number、Boolean、Null、Undefined、Symbol、BigInt
--   引用类型：Object
+- 基本类型：String、Number、Boolean、Null、Undefined、Symbol、BigInt
+- 引用类型：Object
 
 ::: tip
 Symbol 是 ES6 引入的一种新的原始数据类型，表示独一无二的值。Symbol 值通过 Symbol 函数生成，可以接受一个字符串作为参数，表示对 Symbol 的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
@@ -24,23 +26,23 @@ BigInt 是 ES2020 引入的一种新的原始数据类型，表示任意精度�
 ::: danger
 数据可以分为原始数据累心和饮用数据类型
 
--   1. 栈：原始数据类型：String、Number、Boolean、Null、Undefined、Symbol、BigInt
--   2. 堆：引用数据类型：Object 数组 函数
-       不同
--   1. 原始数据类型存储在栈中，值与值之间独立存在，互不影响
--   2. 引用数据类型存储在堆中，堆中存放的是对象的地址，栈中存放的是对象的引用地址，当复制引用数据类型时，复制的是对象的引用地址，指向同一个堆中的对象，因此修改一个会影响另一个
--   3. 原始数据类型比较的是值，引用数据类型比较的是引用地址
+- 1. 栈：原始数据类型：String、Number、Boolean、Null、Undefined、Symbol、BigInt
+- 2. 堆：引用数据类型：Object 数组 函数
+     不同
+- 1. 原始数据类型存储在栈中，值与值之间独立存在，互不影响
+- 2. 引用数据类型存储在堆中，堆中存放的是对象的地址，栈中存放的是对象的引用地址，当复制引用数据类型时，复制的是对象的引用地址，指向同一个堆中的对象，因此修改一个会影响另一个
+- 3. 原始数据类型比较的是值，引用数据类型比较的是引用地址
 
 :::
 
 ### 堆 与 栈
 
--   堆：存储引用类型数据，如对象、数组、函数等，堆中的数据在程序运行期间可以被动态创建和销毁。
--   栈：存储基本类型数据，如数字、字符串、布尔值等，以及引用类型数据的引用地址。栈中的数据在程序运行期间遵循先进后出的原则，即后进先出。
+- 堆：存储引用类型数据，如对象、数组、函数等，堆中的数据在程序运行期间可以被动态创建和销毁。
+- 栈：存储基本类型数据，如数字、字符串、布尔值等，以及引用类型数据的引用地址。栈中的数据在程序运行期间遵循先进后出的原则，即后进先出。
 
 ## 2. 数据类型检测的方式有哪些
 
--   2.1 typeof：typeof 操作符用于获取一个变量的类型，返回一个字符串。typeof 操作符返回的值可以是以下几种：
+- 2.1 typeof：typeof 操作符用于获取一个变量的类型，返回一个字符串。typeof 操作符返回的值可以是以下几种：
 
 ```
 console.log(typeof 123); // number
@@ -59,7 +61,7 @@ console.log(typeof /regex/); // object
 
 其中数组，对象，null，undefined，symbol，bigint，function，都是引用类型，因此 typeof 操作符无法检测到这些类型的值。
 
--   2.2 instanceof：instanceof 操作符用于检测一个对象是否是某个构造函数的实例。instanceof 操作符返回一个布尔值，表示对象是否是某个构造函数的实例。因此 instanceof 只能正确判断饮用数据类型
+- 2.2 instanceof：instanceof 操作符用于检测一个对象是否是某个构造函数的实例。instanceof 操作符返回一个布尔值，表示对象是否是某个构造函数的实例。因此 instanceof 只能正确判断饮用数据类型
 
 ```javascript
 console.log(123 instanceof Number); // false
@@ -76,7 +78,7 @@ console.log(new Date() instanceof Date); // true
 console.log(/regex/ instanceof RegExp); // true
 ```
 
--   2.3 constructor：constructor 属性返回一个对象的构造函数。constructor 属性返回的值是一个函数，表示该对象是由哪个构造函数创建的。如果创建一个对象嘞改变它的原型 constructor 就不能用来判断数据类型了
+- 2.3 constructor：constructor 属性返回一个对象的构造函数。constructor 属性返回的值是一个函数，表示该对象是由哪个构造函数创建的。如果创建一个对象嘞改变它的原型 constructor 就不能用来判断数据类型了
 
 ```javascript
 console.log((123).constructor === Number); // true
@@ -93,7 +95,7 @@ console.log(new Date().constructor === Date); // true
 console.log(/regex/.constructor === RegExp); // true
 ```
 
--   2.4 Object.prototype.toString.call()：Object.prototype.toString.call() 方法用于获取对象的字符串表示形式，返回一个字符串。该方法通过调用对象的 toString 方法来获取对象的字符串表示形式。
+- 2.4 Object.prototype.toString.call()：Object.prototype.toString.call() 方法用于获取对象的字符串表示形式，返回一个字符串。该方法通过调用对象的 toString 方法来获取对象的字符串表示形式。
 
 ```javascript
 console.log(Object.prototype.toString.call(123)); // [object Number]
@@ -113,34 +115,34 @@ console.log(Object.prototype.toString.call(/regex/)); // [object RegExp]
 ::: tip
 obj.toString() 与 Object.prototype.toString.call(obj) 的区别
 
--   obj.toString() 方法返回一个表示该对象的字符串，该字符串由对象类型和值组成。
--   Object.prototype.toString.call(obj) 方法返回一个表示该对象的字符串，该字符串由对象类型和值组成。
-    toString 是 Object 的一个方法 而 array function 等类型作为 Object 的实例 都重写了 toString 方法 而不会调用 object 的 toString 方法的原型 toString 方法
+- obj.toString() 方法返回一个表示该对象的字符串，该字符串由对象类型和值组成。
+- Object.prototype.toString.call(obj) 方法返回一个表示该对象的字符串，该字符串由对象类型和值组成。
+  toString 是 Object 的一个方法 而 array function 等类型作为 Object 的实例 都重写了 toString 方法 而不会调用 object 的 toString 方法的原型 toString 方法
 
 :::
 
 ## 3. 判读数组的那些方法
 
--   3.1 Array.isArray()：Array.isArray() 方法用于判断一个对象是否为数组。该方法返回一个布尔值，表示对象是否为数组。
+- 3.1 Array.isArray()：Array.isArray() 方法用于判断一个对象是否为数组。该方法返回一个布尔值，表示对象是否为数组。
 
 ```
 Array.isArray([1, 2, 3]); // true
 ```
 
--   3.2 object.prototype.toString.call()：object.prototype.toString.call() 方法用于获取对象的字符串表示形式，返回一个字符串。该方法通过调用对象的 toString 方法来获取对象的字符串表示形式。
+- 3.2 object.prototype.toString.call()：object.prototype.toString.call() 方法用于获取对象的字符串表示形式，返回一个字符串。该方法通过调用对象的 toString 方法来获取对象的字符串表示形式。
 
 ```
 console.log(Object.prototype.toString.call([1, 2, 3])); // [object Array]
 ```
 
--   3.3 instanceof：instanceof 操作符用于检测一个对象是否是某个构造函数的实例。instanceof 操作符返回一个布尔值，表示对象是否是某个构造函数的实例。
+- 3.3 instanceof：instanceof 操作符用于检测一个对象是否是某个构造函数的实例。instanceof 操作符返回一个布尔值，表示对象是否是某个构造函数的实例。
 
 ```javascript
 console.log([1, 2, 3] instanceof Array); // true
 console.log([1, 2, 3] instanceof Object); // true
 ```
 
--   3.4 constructor：constructor 属性返回一个对象的构造函数。constructor 属性返回一个对象的构造函数。constructor 属性返回一个对象的构造函数。
+- 3.4 constructor：constructor 属性返回一个对象的构造函数。constructor 属性返回一个对象的构造函数。constructor 属性返回一个对象的构造函数。
 
 ```javascript
 console.log((1, 2, 3).constructor === Array); // false
@@ -152,9 +154,9 @@ console.log((1, 2, 3).constructor === Object); // true
 ::: tip
 null 和 undefined 都是 JavaScript 中的特殊值，用于表示一个空值或未定义的值。但是它们在 JavaScript 中有区别。
 
--   null：空对象
--   undefined：未定义
-:::
+- null：空对象
+- undefined：未定义
+  :::
 
 ## instanceof 操作符的实现原理
 
@@ -164,31 +166,32 @@ instanceof 操作符用于检测一个对象是否是某个构造函数的实例
 
 ```javascript
 function myInstanceof(left, right) {
-    // 获取对象的原型
-    let proto = Object.getPrototypeOf(left);
-    // 获取构造函数的 prototype 对象
-    let prototype = right.prototype;
+	// 获取对象的原型
+	let proto = Object.getPrototypeOf(left);
+	// 获取构造函数的 prototype 对象
+	let prototype = right.prototype;
 
-    // 判断构造函数的 prototype 对象是否在对象的原型链上
-    while (true) {
-        if (!proto) return false;
-        if (proto === prototype) return true;
-        proto = Object.getPrototypeOf(proto);
-    }
+	// 判断构造函数的 prototype 对象是否在对象的原型链上
+	while (true) {
+		if (!proto) return false;
+		if (proto === prototype) return true;
+		proto = Object.getPrototypeOf(proto);
+	}
 }
 ```
+
 # es6
 
 ## 6. var let const 的区别
 
--   var：var 是 JavaScript 中的一个变量声明语句，用于声明一个变量。var 可以重复声明同一个变量，并且可以在声明之前使用。
--   let：let 是 JavaScript 中的一个变量声明语句，用于声明一个块级作用域的变量。let 可以重复声明同一个变量，但是只能在声明之前使用。
--   const：const 是 JavaScript 中的一个变量声明语句，用于声明一个只读的常量。const 不能重复声明同一个变量，并且只能在声明之前使用。 const 的值不能被修改，但是可以修改对象属性。
+- var：var 是 JavaScript 中的一个变量声明语句，用于声明一个变量。var 可以重复声明同一个变量，并且可以在声明之前使用。
+- let：let 是 JavaScript 中的一个变量声明语句，用于声明一个块级作用域的变量。let 可以重复声明同一个变量，但是只能在声明之前使用。
+- const：const 是 JavaScript 中的一个变量声明语句，用于声明一个只读的常量。const 不能重复声明同一个变量，并且只能在声明之前使用。 const 的值不能被修改，但是可以修改对象属性。
 
 ## 7.箭头函数和普通函数的区别
 
 ::: tip
-箭头函数：箭头函数是一种新的函数定义方式，语法上与普通函数不同。箭头函数没有自己的 this、arguments、super 和 new.target，而是使用外层函数的 this、arguments、super 和 new.target。 
+箭头函数：箭头函数是一种新的函数定义方式，语法上与普通函数不同。箭头函数没有自己的 this、arguments、super 和 new.target，而是使用外层函数的 this、arguments、super 和 new.target。
 普通函数：普通函数是一种使用 function 关键字定义的函数，具有自己的 this、arguments、super 和 new.target。
 :::
 
@@ -196,10 +199,11 @@ function myInstanceof(left, right) {
 - 2.箭头函数没有自己的 this，arguments，super 和 new.target。
 - 3.箭头函数不能作为构造函数使用。
 - 4.箭头函数不能使用 yield 关键字。
-- 5.箭头函数继承来的this 指向永远不会变
-- 6.call() apply() bind()等方法不能改变this 指向
+- 5.箭头函数继承来的 this 指向永远不会变
+- 6.call() apply() bind()等方法不能改变 this 指向
 
 # JavaScript 基础
+
 ## 8. new 的实现原理
 
 ::: tip
@@ -208,72 +212,76 @@ new 运算符用于创建一个用户定义的对象类型的实例或具有构�
 
 ```javascript
 function myNew(constructor, ...args) {
-    // 创建一个空对象
-    const obj = {};
-    // 将空对象的原型指向构造函数的原型
-    obj.__proto__ = constructor.prototype;
-    // 将构造函数的 this 指向空对象
-    const result = constructor.apply(obj, args);
-    // 如果构造函数返回一个对象，则返回该对象，否则返回空对象
-    return typeof result === "object" && result !== null ? result : obj;
+	// 创建一个空对象
+	const obj = {};
+	// 将空对象的原型指向构造函数的原型
+	obj.__proto__ = constructor.prototype;
+	// 将构造函数的 this 指向空对象
+	const result = constructor.apply(obj, args);
+	// 如果构造函数返回一个对象，则返回该对象，否则返回空对象
+	return typeof result === "object" && result !== null ? result : obj;
 }
 ```
 
-## 9. map 和object 区别
+## 9. map 和 object 区别
 
-||map|                object                |
-|:--:|:--:|:------------------------------------:|
-|意外的键|map默认不包含任何键，只包含显示插入的键| object有一个原型，原型链上的键名有可能和自己在对象上设置的键名冲突 |
-|键的类型|map的键可以是任意类型，包括对象|        object的键只能是字符串或Symbol         |
-|键的顺序|map的键的顺序与插入顺序一致|           object的键的顺序是随机的            |
-|size|map的size属性返回键的数量|          object的键值对个数只能手动计算          |
-|迭代|map的迭代器返回的是键值对，可以同时迭代键和值|          object的迭代器返回的是键名，不能同时迭代键名和值          |
+|          |                      map                       |                               object                                |
+| :------: | :--------------------------------------------: | :-----------------------------------------------------------------: |
+| 意外的键 |    map 默认不包含任何键，只包含显示插入的键    | object 有一个原型，原型链上的键名有可能和自己在对象上设置的键名冲突 |
+| 键的类型 |        map 的键可以是任意类型，包括对象        |                  object 的键只能是字符串或 Symbol                   |
+| 键的顺序 |          map 的键的顺序与插入顺序一致          |                      object 的键的顺序是随机的                      |
+|   size   |          map 的 size 属性返回键的数量          |                   object 的键值对个数只能手动计算                   |
+|   迭代   | map 的迭代器返回的是键值对，可以同时迭代键和值 |          object 的迭代器返回的是键名，不能同时迭代键名和值          |
 
 ## map 和 weakMap 的区别
 
 map 和 weakMap 都是 JavaScript 中的一种数据结构，用于存储键值对。但是它们在实现上有一些区别。
+
 1. map 是一个普通的数据结构，可以存储任意类型的键和值。weakMap 只能存储对象类型的键，并且键对象不能被垃圾回收机制回收。
 2. map 是一个有序的集合，键值对按照插入顺序存储。weakMap 是一个无序的集合，键值对没有顺序。
 3. map 可以通过 get() 方法获取键对应的值。weakMap 不能通过 get() 方法获取键对应的值。
 4. map 可以通过 has() 方法判断键是否存在。weakMap 不能通过 has() 方法判断键是否存在。
 
 map 的操作方法
--   set(key, value)：向 map 中添加一个新的键值对。
--   get(key)：返回指定键对应的值。
--   has(key)：判断 map 中是否包含指定键。
--   delete(key)：从 map 中删除指定键对应的键值对。
--   clear()：清空 map 中的所有键值对。
--   keys()：返回一个迭代器，迭代 map 中的所有键。
--   values()：返回一个迭代器，迭代 map 中的所有值。
--   entries()：返回一个迭代器，迭代 map 中的所有键值对。
--   forEach(callbackFn, thisArg)：遍历 map 中的所有键值对，并执行回调函数。
--   size：返回 map 中的键值对数量。
+
+- set(key, value)：向 map 中添加一个新的键值对。
+- get(key)：返回指定键对应的值。
+- has(key)：判断 map 中是否包含指定键。
+- delete(key)：从 map 中删除指定键对应的键值对。
+- clear()：清空 map 中的所有键值对。
+- keys()：返回一个迭代器，迭代 map 中的所有键。
+- values()：返回一个迭代器，迭代 map 中的所有值。
+- entries()：返回一个迭代器，迭代 map 中的所有键值对。
+- forEach(callbackFn, thisArg)：遍历 map 中的所有键值对，并执行回调函数。
+- size：返回 map 中的键值对数量。
 
 weakMap 的操作方法
+
 - set(key, value)：向 weakMap 中添加一个新的键值对。
 - get(key)：返回指定键对应的值。
 - delete(key)：从 weakMap 中删除指定键对应的键值对
-weakMap 的键名所引用的对象，垃圾回收机制会自动删除对应的键值对。
-
+  weakMap 的键名所引用的对象，垃圾回收机制会自动删除对应的键值对。
 
 ## DOM 和 BOM
 
 ::: tip
+
 1. DOM 是 Document Object Model 的缩写，即文档对象模型。它是一种用于操作 HTML 和 XML 文档的 API。
 2. Bom 是 Browser Object Model 的缩写，即浏览器对象模型。它是一种用于操作浏览器窗口的 API。
-:::
+   :::
 
-## 常见的DOM操作方法
+## 常见的 DOM 操作方法
 
-1. 获取DOM 节点
- ```
-  document.getElementById("id"); // 按id查询
-  document.getElementsByTagName("tagName"); // 按标签名查询
-  document.getElementsByClassName("className"); // 按类名查询
-  document.querySelector("selector"); // 按选择器查询
+1. 获取 DOM 节点
+
+```
+ document.getElementById("id"); // 按id查询
+ document.getElementsByTagName("tagName"); // 按标签名查询
+ document.getElementsByClassName("className"); // 按类名查询
+ document.querySelector("selector"); // 按选择器查询
 ```
 
-2. 创建DOM节点
+2. 创建 DOM 节点
 
 ```
 document.createElement("tagName"); // 创建一个元素节点
@@ -301,7 +309,7 @@ node.insertBefore(newChild, refChild);// 交换j点位置
 ```css
 node.removeChild(child);
 node.replaceChild(newChild, oldChild);
-node.cloneNode(deep);   
+node.cloneNode(deep);
 node.normalize();
 node.isEqualNode(otherNode);
 ```
@@ -348,6 +356,7 @@ for in 循环用于遍历对象的属性，包括不可枚举的属性。for of 
 31. slice() 方法用于创建一个新数组，包含原始数组中指定范围内的元素。
 
 ## 字符串方法
+
 1. charAt() 方法返回指定位置的字符。
 2. charCodeAt() 方法返回指定位置的字符的 Unicode 编码。
 3. concat() 方法用于连接两个或多个字符串。
@@ -371,6 +380,7 @@ for in 循环用于遍历对象的属性，包括不可枚举的属性。for of 
 21. valueOf() 方法用于将字符串转换为原始值。
 
 ## Object
+
 1. Object.assign() 方法用于将源对象的所有可枚举属性复制到目标对象。
 2. Object.keys() 方法用于返回一个由对象的可枚举属性组成的数组。
 3. Object.values() 方法用于返回一个由对象的所有属性值组成的数组。
@@ -388,7 +398,7 @@ for in 循环用于遍历对象的属性，包括不可枚举的属性。for of 
 15. Object.seal() 方法用于密封一个对象。
 16. Object.freeze() 方法用于冻结一个对象。
 17. Object.create() 方法用于创建一个新对象，使用指定的原型对象。
-18.object.defineProperty() 方法用于定义一个对象的属性。
+    18.object.defineProperty() 方法用于定义一个对象的属性。
 18. Object.defineProperties() 方法用于定义一个对象的多个属性。
 
 ## Reflect
@@ -415,7 +425,7 @@ Reflect 是一个内置的对象，它提供与对象相关的方法。这些方
 ## Promise
 
 ::: tip
- Promise 是一个异步编程的解决方案，用于解决回调函数的嵌套问题。
+Promise 是一个异步编程的解决方案，用于解决回调函数的嵌套问题。
 :::
 
 1. Promise.all() 方法用于将多个 Promise 对象合并成一个 Promise 对象，并返回一个 Promise 对象。
@@ -451,4 +461,4 @@ Proxy 是一个内置的对象，它提供了一种拦截 JavaScript 操作的�
 - 12.apply(target, object, args)：拦截 Proxy 实例作为函数调用的操作，比如 proxy(...args)、proxy.call(object, ...args)、proxy.apply(...)。
 - 13.construct(target, args, newTarget)：拦截 Proxy 实例作为构造函数调用的操作，比如 new proxy(...args)。
 
-## ajax , axios fetch 
+## ajax , axios fetch

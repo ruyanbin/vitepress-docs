@@ -255,3 +255,61 @@ let rightBox = document.querySelector('.rightBox')
     })
 
 ```
+
+
+## 在选的文本中添加右键菜单
+
+1.监听鼠标右键事件 在文档或富文本区域上添加 contextmenu 事件的监听
+```
+document.addEventListener('contextmenu', function (e) {
+// 阻止默认事件
+event.preventDefault()
+// 添加自定义菜单
+})
+```
+2. 显示自定义右键菜单
+创建自定义菜单元素并根据选择的文本设置菜单选项
+
+```
+function showMenu(event) {
+ const customMenu = document.createElement('div')
+ customMenu.style.position = 'absolute'
+ customMenu.style.top = event.clientY + 'px'
+ customMenu.style.left = event.clientX + 'px'
+ // 
+ const menuItems1 = document.createElement('div')
+ menuItems1.textContent = '复制'
+ menuItems1.addEventListener('click', function () {
+ copySelectedText()})
+ customMenu.appendChild(menuItems1)
+ document.body.appendChild(customMenu)
+}
+
+```
+
+3. 处理菜单的点击事件
+ 例如复制选中文本功能
+```
+function copySelectedText() {
+const selection = window.getSelection()
+if (selection.toString()) {
+const range = selection.getRangeAt(0)
+const clipboardData = new ClipboardEvent('copy',{
+  clipboardData: {text: range.toString()},
+  bubbles: true
+}).clipboardData
+data.executeCommand('copy',false,clipboardData)
+}
+}
+```
+4. 移除自定义菜单 当用户点击菜单之外的区域时，隐藏自定义菜单
+```
+document.addEventListener('click', function (e) {
+const customMenu = document.querySelector('.customMenu')
+if (customMenu && !customMenu.contains(e.target)) {
+customMenu.remove()}
+
+})
+
+
+```
