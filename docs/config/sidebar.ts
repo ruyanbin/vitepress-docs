@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 /*
  * @Descripttion: 
  * @Author: voanit
@@ -28,6 +30,9 @@ export default {
         {
             text: "常用api",
             link: "views/Basics/css/modules"
+        }, {
+            text: "Houdini",
+            link: "views/Basics/css/houdini"
         },
         {
             text: "scss",
@@ -81,7 +86,7 @@ export default {
         {
             text: "面试题",
             collapsed: true,
-            items:[
+            items: [
                 {
                     text: "基础",
                     link: "views/Basics/js/interviewFiles/index"
