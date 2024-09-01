@@ -98,5 +98,30 @@ export default {
             ]
         },
     ],
+    'views/Basics/Typescript/': [
+        {
+            text: '基础',
+            link: "views/Basics/Typescript/index"
+        },
+        {
+            text: "基础类型",
+            link: "views/Basics/Typescript/basicType"
+        },
+
+    ],
+    'views/advanced/Canvas/': [
+         {
+          text: 'canvas',
+          link: "views/advanced/Canvas/index"
+        },
+    {
+        text: "canvas动画",
+        link: "views/advanced/Canvas/canvasAnimation"
+    },
+    {
+        text: "canvas绘图",
+        link: "views/advanced/Canvas/canvasDraw"
+    },
+    ],
 
 }

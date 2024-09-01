@@ -33,6 +33,15 @@
         ]
     },
     {
+        "text":"进阶",
+        "items": [
+            {
+                "text": "canvas",
+                "link": "views/Advanced/Canvas/index"
+            }
+        ]
+    },
+    {
         "text": "框架知识",
         "items": [
             {

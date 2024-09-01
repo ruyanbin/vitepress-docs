@@ -181,3 +181,75 @@ resize 属性规定是否可由用户调整元素的尺寸。
 |both|允许调整元素的宽度和高度。|
 |horizontal|允许调整元素的宽度。|
 |vertical|允许调整元素的高度。|
+
+## clip-path
+
+::: tip
+`clip-path` 属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。可以指定一些特定形状。
+:::
+> clip: clip-source|basic-shape|margin-box|border-box|padding-box|content-box|fill-box|stroke-box|view-box|none|initial|inherit;
+
+| 属性     |描述|
+|:-------|:--:|
+| clip-source |用 URL 表示剪切元素的路径|
+| basic-shape |用一个基本形状来剪切元素|
+| margin-box |用元素的外边距框来剪切元素|
+| border-box |用元素的边框框来剪切元素|
+| padding-box |用元素的内边距框来剪切元素|
+| content-box |用元素的内容框来剪切元素|
+| fill-box |用元素的填充框来剪切元素|
+| stroke-box |用元素的描边框来剪切元素|
+| view-box |用元素的视图框来剪切元素|
+| none |不剪切元素|
+| initial |使用默认值|
+| inherit |从父元素继承|
+
+1. 圆形 `circle(radius)`
+```
+clip-path: circle(radius at center);
+```
+2. 椭圆 `ellipse(rx ry)`
+``` css
+clip-path: ellipse(rx ry at center);
+```
+3. 多边形 `polygon(x1 y1, x2 y2,...)`
+``` css
+clip-path: polygon(x1 y1, x2 y2,...);
+```
+4. 路径 `path(path)`
+``` css
+clip-path: path(path);
+```
+5. 矩形 `rect(x y width height)`
+```
+clip-path: rect(x y width height);
+```
+6. inset `inset(inset)`
+```
+clip-path: inset(inset);
+```
+7. 视口 `viewport()`
+```
+clip-path: viewport();
+```
+8. 无 `none`
+```
+clip-path: none;
+```
+
+9. url `url(#id)`
+```
+clip-path: url(#id);
+```
+
+10. 复合 `compound`
+```
+clip-path: url(#id1) url(#id2);
+```
+
+## filter
+```
+filter 属性设置图像效果。
+
+注释：如果希望此属性生效，需要设置元素的 overflow 属性，值可以是 auto、hidden 或 scroll。
+```
