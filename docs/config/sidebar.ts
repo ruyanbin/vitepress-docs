@@ -98,5 +98,18 @@ export default {
             ]
         },
     ],
-
+    'views/advanced/Canvas/': [
+         {
+          text: 'canvas',
+          link: "views/advanced/Canvas/index"
+        },
+    {
+        text: "canvas动画",
+        link: "views/advanced/Canvas/canvasAnimation"
+    },
+    {
+        text: "canvas绘图",
+        link: "views/advanced/Canvas/canvasDraw"
+    },
+    ]
 }
