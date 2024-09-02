@@ -4344,4 +4344,4 @@ export {
   setupDevToolsPlugin,
   setupDevToolsPlugin as setupDevtoolsPlugin
 };
-//# sourceMappingURL=vitepress___@vue_devtools-api.js.map
+//# sourceMappingURL=vitepress___@vue_devtools-api.md.js.map

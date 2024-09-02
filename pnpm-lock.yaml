@@ -1175,7 +1175,7 @@ snapshots:
       '@vueuse/shared': 11.0.3(vue@3.4.38)
       vue-demi: 0.14.10(vue@3.4.38)
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - vue
 
   '@vueuse/core@9.13.0(vue@3.4.38)':
@@ -1185,7 +1185,7 @@ snapshots:
       '@vueuse/shared': 9.13.0(vue@3.4.38)
       vue-demi: 0.14.10(vue@3.4.38)
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - vue
 
   '@vueuse/integrations@11.0.3(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.4.38)':
@@ -1197,7 +1197,7 @@ snapshots:
       async-validator: 4.2.5
       focus-trap: 7.5.4
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - vue
 
   '@vueuse/metadata@11.0.3': {}
@@ -1208,14 +1208,14 @@ snapshots:
     dependencies:
       vue-demi: 0.14.10(vue@3.4.38)
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - vue
 
   '@vueuse/shared@9.13.0(vue@3.4.38)':
     dependencies:
       vue-demi: 0.14.10(vue@3.4.38)
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - vue
 
   algoliasearch@4.24.0:
@@ -1269,7 +1269,7 @@ snapshots:
       normalize-wheel-es: 1.2.0
       vue: 3.4.38
     transitivePeerDependencies:
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
 
   entities@4.5.0: {}
 
@@ -1456,7 +1456,7 @@ snapshots:
       - '@algolia/client-search'
       - '@types/node'
       - '@types/react'
-      - '@vue/composition-api'
+      - '@vue/composition-api.md'
       - async-validator
       - axios
       - change-case

@@ -14,7 +14,7 @@ export default {
             link: 'views/Basics/Html/index'
         },
         {
-            text: 'api',
+            text: 'api.md',
             link: "views/Basics/Html/Api"
         },
     ],
@@ -107,7 +107,10 @@ export default {
             text: "基础类型",
             link: "views/Basics/Typescript/basicType"
         },
-
+        {
+            text: "api",
+            link: "views/Basics/Typescript/api"
+        },
     ],
     'views/advanced/Canvas/': [
          {

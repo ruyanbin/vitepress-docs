@@ -12,7 +12,7 @@ export default {
       link: 'views/Basics/Html/index'
     },
     {
-      text: 'api',
+      text: 'api.md',
       link: "views/Basics/Html/Api"
     },
   ],

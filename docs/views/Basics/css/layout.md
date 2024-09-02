@@ -4,7 +4,7 @@ prev:
     link: "views/Basics/css/index"
 
 next:
-    text: "css-api"
+    text: "css-api.md"
     link: "views/Basics/css/modules"
 ---
 

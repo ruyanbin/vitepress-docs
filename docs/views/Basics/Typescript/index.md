@@ -1,6 +1,6 @@
 # typescript
 
-:::
+::: tip
 它是Javascript的超集，可以编译成Javascript代码，并且可以在浏览器中运行。
 添加型检查，可以减少错误。
 :::
@@ -22,9 +22,36 @@ tsc index.ts
 node index.js
 ```
 在typescript中，我们可以使用类型注解来指定变量的类型。例如：
-```typescript
-let name: string = "John";
+
+
+
+### 在vue 中使用
+1. 安装typescript
+
+<el-tabs  type="card" >
+<el-tab-pane label="pnpm" name="pnpm">
+
+``` js
+pnpm install -D typescript
 ```
+
+</el-tab-pane>
+<el-tab-pane label="npm" name="npm">
+
+``` js
+pnpm install -D typescript
+```
+
+</el-tab-pane>
+<el-tab-pane label="yarn" name="yarn">
+
+``` js
+yarn add -D typescript
+```
+
+</el-tab-pane>
+</el-tabs>
+
 
 ## 变量声明规则
 
