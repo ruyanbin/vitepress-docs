@@ -1,66 +1,87 @@
 [
-    {
-        "text": "Home",
-        "link": "/"
-    },
-    {
-        "text": "前端知识",
-        "items": [
-            {
-                "text": "HTML",
-                "link": "views/Basics/Html/index"
-            },
-            {
-                "text": "CSS",
-                "link": "views/Basics/css/index"
-            },
-            {
-                "text": "JavaScript",
-                "link": "views/Basics/js/index"
-            },
-            {
-                "text": "Node",
-                "link": "views/BackEnd/Node/index"
-            },
-            {
-                "text": "Nginx",
-                "link": "views/BackEnd/Nginx/index"
-            },
-            {
-                "text":"typescript",
-                "link":"views/Basics/Typescript/index"
-            }
-        ]
-    },
-    {
-        "text":"进阶",
-        "items": [
-            {
-                "text": "canvas",
-                "link": "views/Advanced/Canvas/index"
-            }
-        ]
-    },
-    {
-        "text": "框架知识",
-        "items": [
-            {
-                "text": "Vue",
-                "link": "views/Framework/Vue/index"
-            },
-            {
-                "text": "React",
-                "link": "views/Framework/React/index"
-            }
-        ]
-    },
-    {
-        "text": "其他",
-        "items": [
-            {
-                "text": "Git",
-                "link": "views/Other/Git/index"
-            }
-        ]
-    }
+  {
+    "text": "Home",
+    "link": "/"
+  },
+  {
+    "text": "前端知识",
+    "items": [
+      {
+        "text": "HTML",
+        "link": "views/Basics/Html/index"
+      },
+      {
+        "text": "CSS",
+        "link": "views/Basics/css/index"
+      },
+      {
+        "text": "JavaScript",
+        "link": "views/Basics/js/index"
+      },
+      {
+        "text": "Node",
+        "link": "views/BackEnd/Node/index"
+      },
+      {
+        "text": "Nginx",
+        "link": "views/BackEnd/Nginx/index"
+      },
+      {
+        "text": "typescript",
+        "link": "views/Basics/Typescript/index"
+      }
+    ]
+  },
+  {
+    "text": "进阶",
+    "items": [
+      {
+        "text": "canvas",
+        "link": "views/Advanced/Canvas/index"
+      }
+    ]
+  },
+  {
+    "text": "框架知识",
+    "items": [
+      {
+        "text": "Vue",
+        "link": "views/Framework/Vue/index"
+      },
+      {
+        "text": "React",
+        "link": "views/Framework/React/index"
+      }
+    ]
+  },
+  {
+    "text": "后端",
+    "items": [
+      {
+        "text": "maven",
+        "link": "views/BackEnd/Maven/index"
+      },
+      {
+        "text": "Spring",
+        "link": "views/BackEnd/Spring/index"
+      },
+      {
+        "text": "Linux",
+        "link": "views/BackEnd/Linux/index"
+      },
+      {
+        "text": "Mysql",
+        "link": "views/BackEnd/Mysql/index"
+      }
+    ]
+  },
+  {
+    "text": "其他",
+    "items": [
+      {
+        "text": "Git",
+        "link": "views/Other/Git/index"
+      }
+    ]
+  }
 ]
