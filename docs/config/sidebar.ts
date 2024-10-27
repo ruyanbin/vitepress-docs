@@ -126,5 +126,24 @@ export default {
             link: "views/advanced/Canvas/canvasDraw"
         },
     ],
+    'views/Framework/React/':[
+        {
+            text: "介绍",
+            link: "views/Framework/React/index"
+        },
+        {
+            text: "基础",
+            link: "views/Framework/React/basic"
+
+        },
+        {
+            text: "路由",
+            link: "views/Framework/React/router"
+        },
+        {
+            text: "状态管理",
+            link: "views/Framework/React/store"
+        },
+    ]
 
 }
