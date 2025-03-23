@@ -42,6 +42,11 @@
     ]
   },
   {
+    "text": "python",
+    "link": "views/python/introduce"
+
+  },
+  {
     "text": "框架知识",
     "items": [
       {
@@ -51,6 +56,19 @@
       {
         "text": "React",
         "link": "views/Framework/React/index"
+      }
+    ]
+  },
+  {
+    "text": "构建器",
+    "items": [
+      {
+        "text": "vite",
+        "link": "views/structure/vite/index"
+      },
+      {
+        "text": "webpack",
+        "link": "views/structure/webpack/index"
       }
     ]
   },

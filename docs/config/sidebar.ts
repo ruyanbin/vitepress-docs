@@ -144,6 +144,24 @@ export default {
             text: "状态管理",
             link: "views/Framework/React/store"
         },
-    ]
+        {
+            text: "api",
+            link: "views/Framework/React/api"
+        }
+    ],
+     'views/python/':[
+        {
+            text:"介绍",
+            link:'views/python/introduce'
+        },
+        {
+            text:"基础",
+            link:'views/python/basic'
+        },
+        {
+            text:"高级",
+            link:'views/python/advanced'
+        }
+     ]
 
 }

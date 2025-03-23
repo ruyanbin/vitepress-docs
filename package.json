@@ -21,5 +21,11 @@
     "element-plus": "^2.8.1",
     "fs": "0.0.1-security",
     "vue": "^3.4.38"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
   }
 }
