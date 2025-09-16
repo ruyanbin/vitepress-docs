@@ -8,27 +8,27 @@
     "items": [
       {
         "text": "HTML",
-        "link": "views/Basics/Html/index"
+        "link": "Basics/Html/index"
       },
       {
         "text": "CSS",
-        "link": "views/Basics/css/index"
+        "link": "Basics/css/index"
       },
       {
         "text": "JavaScript",
-        "link": "views/Basics/js/index"
+        "link": "Basics/js/index"
       },
       {
         "text": "Node",
-        "link": "views/BackEnd/Node/index"
+        "link": "BackEnd/Node/index"
       },
       {
         "text": "Nginx",
-        "link": "views/BackEnd/Nginx/index"
+        "link": "BackEnd/Nginx/index"
       },
       {
         "text": "typescript",
-        "link": "views/Basics/Typescript/index"
+        "link": "Basics/Typescript/index"
       }
     ]
   },
@@ -37,25 +37,24 @@
     "items": [
       {
         "text": "canvas",
-        "link": "views/Advanced/Canvas/index"
+        "link": "Advanced/Canvas/index"
       }
     ]
   },
   {
     "text": "python",
-    "link": "views/python/introduce"
-
+    "link": "python/introduce"
   },
   {
     "text": "框架知识",
     "items": [
       {
         "text": "Vue",
-        "link": "views/Framework/Vue/index"
+        "link": "Framework/Vue/index"
       },
       {
         "text": "React",
-        "link": "views/Framework/React/index"
+        "link": "Framework/React/index"
       }
     ]
   },
@@ -64,11 +63,11 @@
     "items": [
       {
         "text": "vite",
-        "link": "views/structure/vite/index"
+        "link": "structure/vite/index"
       },
       {
         "text": "webpack",
-        "link": "views/structure/webpack/index"
+        "link": "structure/webpack/index"
       }
     ]
   },
@@ -77,23 +76,23 @@
     "items": [
       {
         "text": "maven",
-        "link": "views/BackEnd/Maven/index"
+        "link": "BackEnd/Maven/index"
       },
       {
         "text": "Spring",
-        "link": "views/BackEnd/Spring/index"
+        "link": "BackEnd/Spring/index"
       },
       {
         "text": "Linux",
-        "link": "views/BackEnd/Linux/index"
+        "link": "BackEnd/Linux/index"
       },
       {
         "text": "Mysql",
-        "link": "views/BackEnd/Mysql/index"
+        "link": "BackEnd/Mysql/index"
       },
       {
-          "text": "MysqlPlus",
-        "link": "views/BackEnd/MysqlPlus/index"
+        "text": "MysqlPlus",
+        "link": "BackEnd/MysqlPlus/index"
       }
     ]
   },
@@ -102,7 +101,7 @@
     "items": [
       {
         "text": "Git",
-        "link": "views/Other/Git/index"
+        "link": "Other/Git/index"
       }
     ]
   }

@@ -16,6 +16,5 @@ export default {
   enhanceApp: async ({ app, router, siteData }) => {
     app.use(ElementPlus)
     app.component("Houdini", await import("../../../example/css/houdini.vue"))
-    // ...
   }
 } satisfies Theme

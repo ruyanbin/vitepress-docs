@@ -8,13 +8,16 @@
 import { defineConfig } from 'vitepress'
 import NavList from "../config/nav.json"
 import sidebarList from "../config/sidebar";
-import inlineSFCPlugin from "vite-plugin-vitepres-inline-sfc";
+import inlineSFCPlugin from "vite-plugin-vitepres-inline-sfc"
+
+// console.log('NavList->', sidebarConfig)
 // console.log('A->', a);
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     base: '/vitepress-docs/',
     title: "海上钢琴师的个人博客",
     description: "海上钢琴师的个人博客",
+    srcDir: "views/",
     themeConfig: {
         outline: {
             level: [2, 3],

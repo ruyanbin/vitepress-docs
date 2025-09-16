@@ -8,53 +8,53 @@ import { link } from "fs";
  * @LastEditTime: 2024-08-16 20:15:10
  */
 export default {
-    'views/Basics/Html/': [
+    'Basics/Html/': [
         {
             text: '基础',
-            link: 'views/Basics/Html/index'
+            link: 'Basics/Html/index'
         },
         {
             text: 'api.md',
-            link: "views/Basics/Html/Api"
+            link: "Basics/Html/Api"
         },
     ],
-    'views/Basics/css/': [
+    'Basics/css/': [
         {
             text: 'css基础',
-            link: "views/Basics/css/index"
+            link: "Basics/css/index"
         },
         {
             text: '布局',
-            link: "views/Basics/css/layout"
+            link: "Basics/css/layout"
         },
         {
             text: "常用api",
-            link: "views/Basics/css/modules"
+            link: "Basics/css/modules"
         }, {
             text: "Houdini",
-            link: "views/Basics/css/houdini"
+            link: "Basics/css/houdini"
         },
         {
             text: "scss",
-            link: "views/Basics/css/scss"
+            link: "Basics/css/scss"
         },
         {
             text: "less",
-            link: "views/Basics/css/less"
+            link: "Basics/css/less"
         },
         {
             text: "面试题",
-            link: "views/Basics/css/interview"
+            link: "Basics/css/interview"
         },
     ],
-    'views/Basics/js/': [
+    'Basics/js/': [
         {
             text: '基础',
-            link: "views/Basics/js/index"
+            link: "Basics/js/index"
         },
         {
             text: "设计模式",
-            link: "views/Basics/js/designPattern"
+            link: "Basics/js/designPattern"
         },
         {
             text: "webApi",
@@ -62,23 +62,23 @@ export default {
             items: [
                 {
                     text: "介绍",
-                    link: "views/Basics/js/webApi/index"
+                    link: "Basics/js/webApi/index"
                 },
                 {
                     text: "MutationObserve",
-                    link: "views/Basics/js/webApi/MutationObserver"
+                    link: "Basics/js/webApi/MutationObserver"
                 },
                 {
                     text: "PerformanceObserver",
-                    link: "views/Basics/js/webApi/PerformanceObserver"
+                    link: "Basics/js/webApi/PerformanceObserver"
                 },
                 {
                     text: "IntersectionObserver",
-                    link: "views/Basics/js/webApi/IntersectionObserver"
+                    link: "Basics/js/webApi/IntersectionObserver"
                 },
                 {
                     text: "ResizeObserver",
-                    link: "views/Basics/js/webApi/ResizeObserver"
+                    link: "Basics/js/webApi/ResizeObserver"
                 }
             ]
         },
@@ -89,79 +89,121 @@ export default {
             items: [
                 {
                     text: "基础",
-                    link: "views/Basics/js/interviewFiles/index"
+                    link: "Basics/js/interviewFiles/index"
                 },
                 {
                     text: "手写",
-                    link: "views/Basics/js/interviewFiles/handwriting"
+                    link: "Basics/js/interviewFiles/handwriting"
                 }
             ]
         },
     ],
-    'views/Basics/Typescript/': [
+    'Basics/Typescript/': [
         {
             text: '基础',
-            link: "views/Basics/Typescript/index"
+            link: "Basics/Typescript/index"
         },
         {
             text: "基础类型",
-            link: "views/Basics/Typescript/basicType"
+            link: "Basics/Typescript/basicType"
         },
         {
             text: "api",
-            link: "views/Basics/Typescript/api"
+            link: "Basics/Typescript/api"
         },
     ],
-    'views/advanced/Canvas/': [
+    'advanced/Canvas/': [
         {
             text: 'canvas',
-            link: "views/advanced/Canvas/index"
+            link: "advanced/Canvas/index"
         },
         {
             text: "canvas动画",
-            link: "views/advanced/Canvas/canvasAnimation"
+            link: "advanced/Canvas/canvasAnimation"
         },
         {
             text: "canvas绘图",
-            link: "views/advanced/Canvas/canvasDraw"
+            link: "advanced/Canvas/canvasDraw"
         },
     ],
-    'views/Framework/React/':[
+    'Framework/React/': [
         {
             text: "介绍",
-            link: "views/Framework/React/index"
+            link: "Framework/React/index"
         },
         {
             text: "基础",
-            link: "views/Framework/React/basic"
+            link: "Framework/React/basic"
 
         },
         {
             text: "路由",
-            link: "views/Framework/React/router"
+            link: "Framework/React/router"
         },
         {
             text: "状态管理",
-            link: "views/Framework/React/store"
+            link: "Framework/React/store"
         },
         {
             text: "api",
-            link: "views/Framework/React/api"
+            link: "Framework/React/api"
         }
     ],
-     'views/python/':[
+    'Framework/Vue/': [
         {
-            text:"介绍",
-            link:'views/python/introduce'
+            text: "介绍",
+            link: "Framework/Vue/index"
         },
         {
-            text:"基础",
-            link:'views/python/basic'
+            text: "源码解读",
+            section: true,
+            items: [
+                {
+                    text: 'reactive',
+                    link: "Framework/Vue/sourceCode/reactivity/reactive"
+                },
+                {
+                    text: 'effect',
+                    link: "Framework/Vue/sourceCode/reactivity/effect"
+                },
+                {
+                    text: 'computed',
+                    link: "Framework/Vue/sourceCode/reactivity/computed"
+                }
+
+            ]
+
         },
         {
-            text:"高级",
-            link:'views/python/advanced'
+            text: "路由",
+            link: "Framework/Vue/router"
+        },
+        {
+            text: "状态管理",
+            link: "Framework/Vue/store"
         }
-     ]
+    ],
+    'python/': [
+        {
+            text: "介绍",
+            link: 'python/introduce'
+        },
+        {
+            text: "基础",
+            link: 'python/basic'
+        },
+        {
+            text: "方法",
+            link: 'python/fun'
+        },
+        {
+            text: "高级",
+            link: 'python/advanced'
+        },
+        {
+            text: "面向对象",
+            link: 'python/OPP'
+        }
+    ]
 
 }
