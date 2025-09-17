@@ -40,4 +40,48 @@ function computed(getterOrOptions) {
     })
 
   }
+  return new ComputedRefImpl(getter, setter)
 ````
+
+### ComputedRefImpl 类
+
+::: tip
+ComputedRefImpl 类是计算属性的实现类，它继承自 RefImpl 类，并重写了 get 和 set 方法
+:::
+
+### ComputedRefImpl 类的构造函数
+
+::: tip
+ComputedRefImpl 类的构造函数接受两个参数，分别是计算属性的 getter 函数和 setter 函数
+:::
+
+```js
+class ComputedRefImpl {
+    // 初始化设置为 true，表示计算属性的值需要重新计算
+    _dirty = true
+    public _value ; /// 计算属性的值
+    public effect: ReactiveEffect; // 计算属性的依赖
+    public dep = new Map()  ; // 存储依赖的集合
+
+    constructor(getter, setter) {
+        this.getter = getter
+        this.setter = setter
+        this.effect = new ReactiveEffect(()=>getter(this._value)), () => {
+            triggerEffects(this.dep)
+        })
+    }
+
+    get value() {
+        trackRefValue(this)
+        if (this._dirty) {
+            this._value = this.effect.run()
+            this._dirty = false
+        }
+        return this._value
+    }
+
+    set value(newValue) {
+        this.setter(newValue)
+    }
+}
+```

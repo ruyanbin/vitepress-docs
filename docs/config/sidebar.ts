@@ -1,3 +1,4 @@
+import { Collapse } from "antd";
 import { link } from "fs";
 
 /*
@@ -157,6 +158,7 @@ export default {
         {
             text: "源码解读",
             section: true,
+            Collapse: true,
             items: [
                 {
                     text: 'reactive',
@@ -165,6 +167,10 @@ export default {
                 {
                     text: 'effect',
                     link: "Framework/Vue/sourceCode/reactivity/effect"
+                },
+                {
+                    text: 'ref',
+                    link: "Framework/Vue/sourceCode/reactivity/ref"
                 },
                 {
                     text: 'computed',
