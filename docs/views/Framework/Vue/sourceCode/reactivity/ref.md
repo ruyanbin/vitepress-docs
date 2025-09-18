@@ -32,13 +32,19 @@ class RefImpl {
   public dep = new Map(); // 用于存储依赖的Map集合，实际上在Vue的实现中这里应该是Set
   private _rawValue; // 存储原始值，不经过响应式处理
   private _value; // 存储响应式处理后的值
-  constructor(value, __v_isShallow) {
-    this.__v_isShallow = __v_isShallow;
-    this._rawValue = value;
-    this._value = __v_isShallow ? value : toReactive(value);
-    this.dep = new Set();
+public readonly [ReactiveFlags.IS_REF] = true; // 标识是否是响应式，用于判断是否需要递归响应式处理
+  public readonly [ReactiveFlags.IS_SHALLOW] = false; // 标识是否是浅响应式，用于判断是否需要递归响应式处理
+  constructor(value, isShallow：boolean) {
+    this.__v_isShallow = isShallowi
+    this._rawValue = isShallow ? value : toRaw(value);
+    this._value = isShallow ? value : toReactive(value);
+    this[ReactiveFlags.IS_SHALLOW] = isShallow;
   }
-
+/**
+ * value 的getter 方法
+ * 当访问 value 属性时，会调用 trackRefValue 方法进行依赖追踪
+ * 返回的是 当前值
+ */
   get value() {
     trackRefValue(this);
     return this._value;

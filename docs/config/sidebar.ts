@@ -175,7 +175,17 @@ export default {
                 {
                     text: 'computed',
                     link: "Framework/Vue/sourceCode/reactivity/computed"
-                }
+                },
+                {
+                    text: 'watch',
+                    link: "Framework/Vue/sourceCode/reactivity/watch"
+                },
+                {
+                    text: 'watchEffect',
+                    link: "Framework/Vue/sourceCode/reactivity/watchEffect"
+                },
+
+
 
             ]
 
