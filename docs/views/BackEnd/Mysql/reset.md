@@ -8,7 +8,6 @@ net stop mysqld
 ```
 mysqld --console --skip-grant-tables --shared-memory
 ```
-![alt text](mysql-01.png)
 
 3. 打开命令行启动另外一个窗体（win+R）
 :::

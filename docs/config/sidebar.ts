@@ -220,6 +220,16 @@ export default {
             text: "面向对象",
             link: 'python/OPP'
         }
+    ],
+    'BackEnd/Mysql/': [
+        {
+            text: "介绍",
+            link: "BackEnd/Mysql/index"
+        },
+         {
+            text: "密码重置",
+            link: "BackEnd/Mysql/reset"  
+        }
     ]
 
 }
